@@ -1,0 +1,15 @@
+{
+  "category": "home_automation",
+  "demo": true,
+  "features": [
+    "Turn on/off virtual lights"
+  ],
+  "icon": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678078-light-bulb-512.png",
+  "name": "Virtual Lights",
+  "sdk": {
+    "name": "nodejs",
+    "version": "2.7.0"
+  },
+  "softwareVersion": null,
+  "website": null
+}
