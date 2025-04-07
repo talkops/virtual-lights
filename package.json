@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "talkops": "file:../sdk"
+    "talkops": "^2.11.2"
   }
 }
