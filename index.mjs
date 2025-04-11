@@ -9,7 +9,7 @@ const names = new Parameter('LIGHT_NAMES')
 
 const extension = new Extension()
   .setName('Virtual Lights')
-  .setIcon('https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678078-light-bulb-512.png')
+  .setIcon('https://talkops.app/images/extensions/virtual-lights.png')
   .setCategory('home_automation')
   .setDemo(true)
   .setFeatures(['Turn on/off virtual lights'])

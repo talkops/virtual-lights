@@ -4,7 +4,7 @@
   "features": [
     "Turn on/off virtual lights"
   ],
-  "icon": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678078-light-bulb-512.png",
+  "icon": "https://talkops.app/images/extensions/virtual-lights.png",
   "name": "Virtual Lights",
   "sdk": {
     "name": "nodejs",
