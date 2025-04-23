@@ -1,5 +1,4 @@
 import { Extension, Parameter } from 'talkops'
-import update_lights from './schemas/functions/update_lights.json' with { type: 'json' }
 
 const states = new Map()
 
@@ -14,7 +13,30 @@ const extension = new Extension()
   .setDemo(true)
   .setFeatures(['Turn on/off virtual lights'])
   .setParameters([names])
-  .setFunctionSchemas([update_lights])
+  .setFunctionSchemas([
+    {
+      name: 'update_lights',
+      description: 'Update lights',
+      parameters: {
+        type: 'object',
+        properties: {
+          action: {
+            type: 'string',
+            enum: ['on', 'off'],
+            description: 'The desired action',
+          },
+          names: {
+            type: 'array',
+            description: 'The light names',
+            items: {
+              type: 'string',
+            },
+          },
+        },
+        required: ['action', 'names'],
+      },
+    },
+  ])
   .setFunctions([
     function update_lights(names, action) {
       for (const name of names) {
