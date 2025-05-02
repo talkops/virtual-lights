@@ -45,7 +45,7 @@ const extension = new Extension()
       return 'Done.'
     },
   ])
-  .setBootstrap(loop)
+  .on('boot', loop)
 
 function loop() {
   const lights = []
