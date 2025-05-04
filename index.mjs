@@ -46,6 +46,7 @@ const extension = new Extension()
     },
   ])
   .on('boot', loop)
+  .start()
 
 function loop() {
   const lights = []
