@@ -42,13 +42,13 @@ const extension = new Extension()
       for (const name of names) {
         states.set(name, action)
       }
+      updateMemory()
       return 'Done.'
     },
   ])
-  .on('boot', loop)
   .start()
 
-function loop() {
+function updateMemory() {
   const lights = []
   for (const name of names.getValue().split(',')) {
     if (!states.has(name)) states.set(name, 'off')
@@ -57,5 +57,6 @@ function loop() {
   extension.setInstructions(
     `You are a home automation assistant, you can manage the lights: ${lights.join(', ')}.`,
   )
-  setTimeout(loop, 1000)
 }
+
+updateMemory()
